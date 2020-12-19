@@ -3,7 +3,10 @@ import jenkins.model.Jenkins
 def realm = Jenkins.getInstance().getSecurityRealm()   
 def users = realm.getAllUsers()   
 
-for (User u : users) {   
-    def userid = u.getId()   
-    println(userid + " ") 
+def function(){
+    for (User u : users) {   
+        def userid = u.getId()   
+        println(userid + " ") 
+    }
 }
+return this
